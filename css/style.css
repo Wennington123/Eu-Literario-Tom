@@ -1,0 +1,73 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg:        #fafaf8;
+  --text:      #2c2c2c;
+  --accent:    #8b5e3c;
+  --muted:     #8a8a80;
+  --serif:     'Georgia', 'Times New Roman', serif;
+  --sans:      'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+}
+
+html {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+body {
+  font-family: var(--serif);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+main {
+  max-width: 680px;
+  width: 100%;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+h1 {
+  font-size: 2.8rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-family: var(--sans);
+  font-size: 1rem;
+  color: var(--muted);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.content {
+  min-height: 40vh;
+}
+
+footer {
+  text-align: center;
+  margin-top: 4rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
