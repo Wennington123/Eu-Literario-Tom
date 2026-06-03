@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anatomia do Sofrimento — Eu Literário Tom</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Anatomia do Sofrimento</h1>
+      <p class="subtitle">Sonetos da Perseverança — Wennington Dias</p>
+      <nav>
+        <a href="index.html">Início</a>
+        <a href="poemas.html">Poemas</a>
+        <a href="livro.html">Livro</a>
+      </nav>
+    </header>
+
+    <section class="content">
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="html">Ler em HTML</button>
+        <button class="tab-btn" data-tab="pdf">Visualizar PDF</button>
+      </div>
+
+      <div class="tab-panel active" id="tab-html">
+        <div class="reader">
+          <div class="section-text" id="apresentacao"></div>
+          <div class="separator">✦</div>
+          <div id="poemas-container"></div>
+          <div class="separator">✦</div>
+          <div class="section-text" id="biografia"></div>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="tab-pdf">
+        <embed class="pdf-viewer" src="assets/anatomia_do_sofrimento.pdf" type="application/pdf">
+      </div>
+
+      <div class="actions" style="margin-top: 2rem;">
+        <a href="assets/anatomia_do_sofrimento.pdf" class="btn" download>Baixar PDF</a>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 — Eu Literário Tom</p>
+    </footer>
+  </main>
+  <script src="js/main.js"></script>
+</body>
+</html>

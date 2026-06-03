@@ -8,9 +8,11 @@
   --bg:        #fafaf8;
   --text:      #2c2c2c;
   --accent:    #8b5e3c;
+  --accent-hover: #6d4830;
   --muted:     #8a8a80;
   --serif:     'Georgia', 'Times New Roman', serif;
   --sans:      'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --border:    #e0dcd4;
 }
 
 html {
@@ -35,6 +37,8 @@ main {
   width: 100%;
 }
 
+/* ── Header ── */
+
 header {
   text-align: center;
   margin-bottom: 4rem;
@@ -56,9 +60,45 @@ h1 {
   text-transform: uppercase;
 }
 
+/* ── Navigation ── */
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+nav a,
+.back-link {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  color: var(--accent);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+nav a:hover,
+.back-link:hover {
+  border-color: var(--accent);
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+/* ── Content ── */
+
 .content {
   min-height: 40vh;
 }
+
+/* ── Footer ── */
 
 footer {
   text-align: center;
@@ -67,7 +107,251 @@ footer {
   color: var(--muted);
 }
 
+/* ── Book Cover ── */
+
+.book-cover {
+  text-align: center;
+  margin: 0 auto 2rem;
+}
+
+.book-cover img {
+  max-width: 260px;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  border-radius: 2px;
+}
+
+.book-info {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.book-info h2 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--accent);
+  margin-bottom: 0.3rem;
+}
+
+.book-info .book-author {
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+}
+
+/* ── Buttons / Links ── */
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.6rem 1.5rem;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  border-radius: 2px;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn.primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background: var(--accent-hover);
+}
+
+/* ── Tabs (leitura online) ── */
+
+.tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.tab-btn {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: none;
+  border: none;
+  color: var(--muted);
+  padding: 0.5rem 1.2rem;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.tab-btn.active {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.tab-btn:hover {
+  color: var(--accent);
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+/* ── PDF Embed ── */
+
+.pdf-viewer {
+  width: 100%;
+  height: 80vh;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+}
+
+/* ── HTML Reader ── */
+
+.reader .poem {
+  margin-bottom: 3rem;
+}
+
+.reader .poem h3 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.reader .poem p {
+  white-space: pre-line;
+  line-height: 2;
+}
+
+/* ── Poem Cards ── */
+
+.poems-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.poem-card {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.poem-card:last-child {
+  border-bottom: none;
+}
+
+.poem-card h3 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.poem-card .poem-body {
+  white-space: pre-line;
+  line-height: 2;
+}
+
+.poem-card .poem-body:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Apresentação / Biografia ── */
+
+.section-text {
+  white-space: pre-line;
+  line-height: 1.9;
+  margin-bottom: 2.5rem;
+}
+
+.section-text h3 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* ── Separator ── */
+
+.separator {
+  text-align: center;
+  color: var(--muted);
+  margin: 2rem 0;
+  font-size: 0.9rem;
+  letter-spacing: 0.5em;
+}
+
+/* ── Selection ── */
+
 ::selection {
   background: var(--accent);
   color: #fff;
+}
+
+/* ── Responsive ── */
+
+@media (max-width: 600px) {
+  html {
+    font-size: 16px;
+  }
+
+  body {
+    padding: 1.2rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  nav {
+    gap: 1.2rem;
+  }
+
+  .book-cover img {
+    max-width: 200px;
+  }
+
+  .book-info h2 {
+    font-size: 1.3rem;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+
+  .pdf-viewer {
+    height: 60vh;
+  }
 }
